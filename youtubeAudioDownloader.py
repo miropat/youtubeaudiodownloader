@@ -1,6 +1,4 @@
 from pytube import YouTube
-from moviepy.editor import *
-
 
 
 video_url = input("Please enter the video URL: ")
