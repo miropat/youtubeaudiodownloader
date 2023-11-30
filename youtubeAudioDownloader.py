@@ -4,7 +4,9 @@ from moviepy.editor import *
 
 
 video_url = input("Please enter the video URL: ")
-yt = YouTube(video_url)
+yt = YouTube(video_url,
+            use_oauth=False,
+            allow_oauth_cache=True)
 
 
 
@@ -14,6 +16,8 @@ video = yt.streams.filter(only_audio=True, file_extension="mp4").first()
 
 
 video.download()
+
+
 #convert audio
 
 original_filename = video.default_filename
